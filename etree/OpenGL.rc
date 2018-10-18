@@ -1,0 +1,221 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (P.R.C.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\OpenGL.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""l.chs\\afxres.rc""          // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\idr_main.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_GLWnd DIALOGEX 0, 0, 211, 21
+STYLE DS_SETFONT | WS_MAXIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CLIPSIBLINGS | 
+    WS_CLIPCHILDREN | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+CAPTION " Natural Tree Simulation - [ Initializing OpenGL subsystem ]"
+FONT 10, "System", 0, 0, 0x0
+BEGIN
+END
+
+IDD_Control DIALOGEX 0, 0, 124, 250
+STYLE DS_SYSMODAL | DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION " Control Panel"
+FONT 8, "Tahoma", 0, 0, 0x1
+BEGIN
+    LISTBOX         IDC_ControlItem,10,95,72,106,LBS_NOINTEGRALHEIGHT | NOT 
+                    WS_BORDER | WS_VSCROLL | WS_TABSTOP,WS_EX_TRANSPARENT | 
+                    WS_EX_STATICEDGE
+    GROUPBOX        "Model Statistics",IDC_STATIC,4,19,115,62
+    EDITTEXT        IDC_Status,8,29,107,49,ES_MULTILINE | ES_READONLY | NOT 
+                    WS_BORDER,WS_EX_TRANSPARENT
+    GROUPBOX        "Model Parameter",IDC_STATIC,4,84,115,123
+    CONTROL         "Slider1",IDC_Slider,"msctls_trackbar32",TBS_VERT | 
+                    TBS_NOTICKS | WS_TABSTOP,82,91,13,113
+    LTEXT           "Max",IDC_Max,95,100,21,8
+    LTEXT           "Min",IDC_Min,95,194,21,8
+    LTEXT           "Max.",IDC_STATIC,95,92,17,8
+    LTEXT           "Cur.",IDC_STATIC,95,134,15,8
+    LTEXT           "Min.",IDC_STATIC,95,186,14,8
+    EDITTEXT        IDC_Current,95,143,21,12,ES_AUTOHSCROLL | ES_READONLY | 
+                    NOT WS_BORDER
+    CONTROL         "Automatically close on inactiving",IDC_AUTO,"Button",
+                    BS_AUTOCHECKBOX | BS_FLAT | WS_TABSTOP,4,3,116,10
+    LTEXT           "Adjusting  [Tree Total Depth] or [SSE. Dep. Attenuate] too great should went short of resource.",
+                    IDC_STATIC,14,217,106,25
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,4,16,115,1
+    LTEXT           "CAUTION:",IDC_STATIC,6,209,34,8
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,4,244,115,1
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,8
+ PRODUCTVERSION 1,0,0,8
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080404b0"
+        BEGIN
+            VALUE "CompanyName", "Institute of Computing Technology, Chinese Academy of Sciences, Beijing 100871, China"
+            VALUE "FileDescription", "Fractal Tree Based On OpenGL "
+            VALUE "FileVersion", "1, 0, 1,0"
+            VALUE "InternalName", "eTree"
+            VALUE "LegalCopyright", "(c) Boris J. Wang (Wang Jiaping) 2003.2"
+            VALUE "LegalTrademarks", "e_boris2002@hotmail.com"
+            VALUE "OriginalFilename", "eTree.exe"
+            VALUE "ProductName", "Fractal Tree"
+            VALUE "ProductVersion", "1, 0, 1,0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_GLWnd, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 204
+        TOPMARGIN, 8
+        BOTTOMMARGIN, 14
+    END
+
+    IDD_Control, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 117
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 243
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+BARK.BMP                BITMAP                  "bark.bmp"
+BUTTON.BMP              BITMAP                  "button.bmp"
+GROUND.BMP              BITMAP                  "ground.BMP"
+HELP.BMP                BITMAP                  "help.bmp"
+LEAF.BMP                BITMAP                  "leaf.bmp"
+SKY.BMP                 BITMAP                  "sky.bmp"
+#endif    // Chinese (P.R.C.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE 4, 2
+#pragma code_page(936)
+#endif //_WIN32
+#include "res\OpenGL.rc2"  // non-Microsoft Visual C++ edited resources
+#include "l.chs\afxres.rc"          // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
