@@ -1,0 +1,123 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include <windows.h>
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.K.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENG)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_UK
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_RESOLUTION DIALOG DISCARDABLE  0, 0, 231, 186
+STYLE DS_MODALFRAME | DS_SETFOREGROUND | DS_CENTER | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Select Screen Mode"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,134,17,50,14,WS_GROUP
+    CONTROL         "640 x 480",IDC_640,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,46,17,56,16
+    CONTROL         "800 x 600",IDC_800,"Button",BS_AUTORADIOBUTTON,46,38,56,
+                    16
+    CONTROL         "1024 x 768",IDC_1024,"Button",BS_AUTORADIOBUTTON,46,59,
+                    56,16
+    CONTROL         "Fullscreen",IDC_FULLSCREEN,"Button",BS_AUTOCHECKBOX | 
+                    WS_GROUP | WS_TABSTOP,134,38,50,14
+    GROUPBOX        "Antialiasing",IDC_ANTIALIAS,21,92,193,80
+    CONTROL         "None",IDC_NOAA,"Button",BS_AUTORADIOBUTTON | WS_GROUP,
+                    25,107,35,11
+    CONTROL         "2x",IDC_2AA,"Button",BS_AUTORADIOBUTTON,25,123,35,11
+    CONTROL         "3x",IDC_3AA,"Button",BS_AUTORADIOBUTTON,25,139,35,11
+    CONTROL         "4x",IDC_4AA,"Button",BS_AUTORADIOBUTTON,25,155,35,11
+    CONTROL         "5x",IDC_5AA,"Button",BS_AUTORADIOBUTTON,75,107,35,11
+    CONTROL         "6x",IDC_6AA,"Button",BS_AUTORADIOBUTTON,75,123,35,11
+    CONTROL         "7x",IDC_7AA,"Button",BS_AUTORADIOBUTTON,75,139,35,11
+    CONTROL         "8x",IDC_8AA,"Button",BS_AUTORADIOBUTTON,75,155,35,11
+    CONTROL         "9x",IDC_9AA,"Button",BS_AUTORADIOBUTTON,125,107,35,11
+    CONTROL         "10x",IDC_10AA,"Button",BS_AUTORADIOBUTTON,125,123,35,11
+    CONTROL         "11x",IDC_11AA,"Button",BS_AUTORADIOBUTTON,125,139,35,11
+    CONTROL         "12x",IDC_12AA,"Button",BS_AUTORADIOBUTTON,125,155,35,11
+    CONTROL         "13x",IDC_13AA,"Button",BS_AUTORADIOBUTTON,175,107,35,11
+    CONTROL         "14x",IDC_14AA,"Button",BS_AUTORADIOBUTTON,175,123,35,11
+    CONTROL         "15x",IDC_15AA,"Button",BS_AUTORADIOBUTTON,175,139,35,11
+    CONTROL         "16x",IDC_16AA,"Button",BS_AUTORADIOBUTTON,175,155,35,11
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_RESOLUTION, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 224
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 179
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+#endif    // English (U.K.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

@@ -1,0 +1,25 @@
+Spherical Harmonics
+
+Technical Information
+
+This program displays a simple looking scene (actually containing approximately 25,000 vertices) which can be lit in 3 different ways. As well as standard OpenGL lighting, the scene can be lit by two techniques which make use of spherical harmonics. This method produces global illumination style images in real time, but usually only for static objects.
+
+The Real Spherical Harmonics
+
+The real spherical harmonics are orthonormal basis functions on the surface of a sphere. Any given function on a sphere can be encoded as the sum of scaled copies of these basis functions. The scaling factors used are called the coefficients, and can easily be arranged to form a vector. If we want to integrate the product of two functions encoded in this way over a sphere then, due to the orthonormality, this is done simply by taking the dot product of the two vectors of coefficients.
+
+Realistic Lighting
+
+The most realistic lighting solution possible is formulated in the "rendering equation". The most difficult term in this equation is an integral over a sphere. We can split the integrand for this into 2 parts, one relating to the light source, and one relating to the surface we are shading. By projecting these two functions onto the SH basis functions, we can obtain the vectors of coefficients above, and evaluation of the lighting at a point becomes a simple dot product of coefficients.
+
+Rotation Invariance
+
+One important property of the projection into spherical harmonic coefficients is that it is rotation invariant. That is, rotating a function and projecting into SH "space" is just the same as projecting, then rotating. This way, we can rotate the light source around an object without having to project the rotated light source into SH coefficients explicitly. We can take the coefficients for the light source in some standard orientation, and apply a rotation matrix to get the coefficents for the light in another position. Thus the position of the light relative to our object can easily be varied. This demo uses the simple method of using separate rotation matrices for rotations about the Y and Z axes, as described in the paper by Green.
+
+The Transfer Function
+
+The SH coefficients at a vertex are a compact representation of how light will be reflected by that vertex. The data encoded in them can include shadowing and interreflection information. We will call this a transfer function. Calculating the transfer function for each vertex requires a Monte-Carlo integration. The demo performs this integration at each vertex using 2500 samples.
+
+Handling Animated Scenes
+
+The SH coefficients which encode the transfer function at a vertex are more complicated than those which encode the light source, as they include shadowing information. This varies unpredictably, so the scene to be lit is static. You could apply the lighting to an animated model, for example a Quake 2 model, by encoding the transfer function at each vertex for each keyframe, and linearly interpolating between frames when rendering, exactly the same way as position and normal data is interpolated between keyframes. 

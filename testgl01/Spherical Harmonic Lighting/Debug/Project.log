@@ -1,0 +1,28 @@
+﻿生成启动时间为 2018/10/28 1:40:48。
+     1>项目“F:\graphdev\testOpenGl\testgl01\Spherical Harmonic Lighting\Project.vcxproj”在节点 2 上(build 个目标)。
+     1>InitializeBuildStatus:
+         正在对“.\Debug\Project.unsuccessfulbuild”执行 Touch 任务。
+       ClCompile:
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _CRT_SECURE_NO_DEPRECATE /D _VC80_UPGRADE=0x0600 /D _MBCS /Gm /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo".\Debug/" /Fd".\Debug/vc100.pdb" /Gd /TP /analyze- /errorReport:prompt "Window\WGL Extensions\WGL_ARB_extensions_string_extension.cpp" "Window\WGL Extensions\WGL_ARB_multisample_extension.cpp" "Window\WGL Extensions\WGL_ARB_pixel_format_extension.cpp" "Window\WGL Extensions\WGL_EXT_swap_control_extension.cpp" Window\WINDOW_FindSamplesSupported.cpp Window\WINDOW_Init.cpp Window\WINDOW_InitExtended.cpp Window\WINDOW_SelectModeProc.cpp
+         WINDOW_SelectModeProc.cpp
+     1>f:\graphdev\testopengl\testgl01\spherical harmonic lighting\window\window_selectmodeproc.cpp(14): fatal error C1083: 无法打开包括文件:“GL/glext.h”: No such file or directory
+         WINDOW_InitExtended.cpp
+     1>f:\graphdev\testopengl\testgl01\spherical harmonic lighting\window\window_initextended.cpp(17): fatal error C1083: 无法打开包括文件:“GL/glext.h”: No such file or directory
+         WINDOW_Init.cpp
+     1>f:\graphdev\testopengl\testgl01\spherical harmonic lighting\window\window_init.cpp(14): fatal error C1083: 无法打开包括文件:“GL/glext.h”: No such file or directory
+         WINDOW_FindSamplesSupported.cpp
+     1>f:\graphdev\testopengl\testgl01\spherical harmonic lighting\window\window_findsamplessupported.cpp(14): fatal error C1083: 无法打开包括文件:“GL/glext.h”: No such file or directory
+         WGL_EXT_swap_control_extension.cpp
+     1>f:\graphdev\testopengl\testgl01\spherical harmonic lighting\window\wgl extensions\wgl_ext_swap_control_extension.cpp(13): fatal error C1083: 无法打开包括文件:“GL\glext.h”: No such file or directory
+         WGL_ARB_pixel_format_extension.cpp
+     1>f:\graphdev\testopengl\testgl01\spherical harmonic lighting\window\wgl extensions\wgl_arb_pixel_format_extension.cpp(13): fatal error C1083: 无法打开包括文件:“GL\glext.h”: No such file or directory
+         WGL_ARB_multisample_extension.cpp
+     1>f:\graphdev\testopengl\testgl01\spherical harmonic lighting\window\wgl extensions\wgl_arb_multisample_extension.cpp(13): fatal error C1083: 无法打开包括文件:“GL\glext.h”: No such file or directory
+         WGL_ARB_extensions_string_extension.cpp
+     1>f:\graphdev\testopengl\testgl01\spherical harmonic lighting\window\wgl extensions\wgl_arb_extensions_string_extension.cpp(13): fatal error C1083: 无法打开包括文件:“GL\glext.h”: No such file or directory
+         正在生成代码...
+     1>已完成生成项目“F:\graphdev\testOpenGl\testgl01\Spherical Harmonic Lighting\Project.vcxproj”(build 个目标)的操作 - 失败。
+
+生成失败。
+
+已用时间 00:00:08.16

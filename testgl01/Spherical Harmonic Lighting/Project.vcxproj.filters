@@ -1,0 +1,400 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{a306441a-7369-431d-b285-7d04a101dd11}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{baf0787d-d998-4b02-95e6-8990700625fc}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl</Extensions>
+    </Filter>
+    <Filter Include="Maths">
+      <UniqueIdentifier>{c217bc3e-7c78-4e34-b830-f931db7f555c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Maths\Maths Source">
+      <UniqueIdentifier>{0568bf83-80b8-44e9-abcc-1fd13b06181f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Maths\Maths Headers">
+      <UniqueIdentifier>{65dee4aa-ddcb-4113-9e0d-70bc5d6bbd8b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Log">
+      <UniqueIdentifier>{fff096f3-b7e1-4bd1-b765-fc36692bbbb2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Image">
+      <UniqueIdentifier>{c836ba8e-7fe0-45e5-9b52-4b3d857828ca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Image\BMP Image">
+      <UniqueIdentifier>{91a21c55-3276-474c-9b02-daf0763e46ed}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Image\TGA Image">
+      <UniqueIdentifier>{3b3c05b9-5f18-4489-bb66-7e77c0699d51}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Timer">
+      <UniqueIdentifier>{70935667-bc55-4596-94c1-889328b8f740}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fps Counter">
+      <UniqueIdentifier>{16ec8b3e-3721-41ac-bd6e-e551a5426712}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Window">
+      <UniqueIdentifier>{6c9f3f11-6f40-4c43-b4ff-8f3376568f85}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Window\Standard Window">
+      <UniqueIdentifier>{ef40771c-532a-497f-83e7-e6da5fe23d1f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Window\Extended Window">
+      <UniqueIdentifier>{55429342-f477-487d-88aa-49e946141b27}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Window\Extended Window\WGL Extensions">
+      <UniqueIdentifier>{6e8415a5-725e-4c11-b112-2db9c43166c5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Bitmap Font">
+      <UniqueIdentifier>{dd3a81f2-915e-4fa9-842a-3e2a34ba379e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{dac2f3d3-bc41-4a6d-9863-b6f894fffe76}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GL files">
+      <UniqueIdentifier>{e409e1e0-8dfb-48bf-a15e-b46a9ca171f8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Samples">
+      <UniqueIdentifier>{71d7a80c-0ce8-4c7e-ac75-98abe7155f11}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Light">
+      <UniqueIdentifier>{5129e895-1c3c-422b-82ce-3926515f862a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Bounding Volumes">
+      <UniqueIdentifier>{3e671188-d85f-469b-9aa5-238cdba3674a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Bounding Volumes\AA_BOUNDING_BOX">
+      <UniqueIdentifier>{6d20cfcb-38da-4293-b497-fb5c88683353}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Bounding Volumes\BOUNDING_SPHERE">
+      <UniqueIdentifier>{2a175786-906e-4a57-8caa-d06bcd23b495}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Bounding Volumes\FRUSTUM">
+      <UniqueIdentifier>{84e403d3-3f27-497f-acf5-4a8836854415}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Ray">
+      <UniqueIdentifier>{fde36c58-f4c0-44d4-80a0-7f202e64dcbf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SH Scene">
+      <UniqueIdentifier>{73a688c4-e7e3-44aa-9389-11f465b51789}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SH Scene\SH Vertex">
+      <UniqueIdentifier>{27e43470-83a0-43f8-91f5-9fe8189eaef2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SH Scene\SH Object">
+      <UniqueIdentifier>{9c14f05d-e695-4e50-88e5-afd7f5aefd3a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SH Rotation">
+      <UniqueIdentifier>{ff86c054-3df0-4908-8c37-abf4fa91c74c}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Maths\COLOR.cpp">
+      <Filter>Maths\Maths Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Maths\MATRIX4X4.cpp">
+      <Filter>Maths\Maths Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Maths\PLANE.cpp">
+      <Filter>Maths\Maths Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Maths\VECTOR2D.cpp">
+      <Filter>Maths\Maths Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Maths\VECTOR3D.cpp">
+      <Filter>Maths\Maths Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Maths\VECTOR4D.cpp">
+      <Filter>Maths\Maths Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Log\LOG.cpp">
+      <Filter>Log</Filter>
+    </ClCompile>
+    <ClCompile Include="Image\IMAGE_CalculateStride.cpp">
+      <Filter>Image</Filter>
+    </ClCompile>
+    <ClCompile Include="Image\IMAGE_ExpandPalette.cpp">
+      <Filter>Image</Filter>
+    </ClCompile>
+    <ClCompile Include="Image\IMAGE_Load.cpp">
+      <Filter>Image</Filter>
+    </ClCompile>
+    <ClCompile Include="Image\IMAGE_LoadAlpha.cpp">
+      <Filter>Image</Filter>
+    </ClCompile>
+    <ClCompile Include="Image\IMAGE_Load24BitBMP.cpp">
+      <Filter>Image\BMP Image</Filter>
+    </ClCompile>
+    <ClCompile Include="Image\IMAGE_Load8BitBMP.cpp">
+      <Filter>Image\BMP Image</Filter>
+    </ClCompile>
+    <ClCompile Include="Image\IMAGE_LoadBMP.cpp">
+      <Filter>Image\BMP Image</Filter>
+    </ClCompile>
+    <ClCompile Include="Image\IMAGE_LoadCompressedTrueColorTGA.cpp">
+      <Filter>Image\TGA Image</Filter>
+    </ClCompile>
+    <ClCompile Include="Image\IMAGE_LoadTGA.cpp">
+      <Filter>Image\TGA Image</Filter>
+    </ClCompile>
+    <ClCompile Include="Image\IMAGE_LoadUncompressed8BitTGA.cpp">
+      <Filter>Image\TGA Image</Filter>
+    </ClCompile>
+    <ClCompile Include="Image\IMAGE_LoadUncompressedTrueColorTGA.cpp">
+      <Filter>Image\TGA Image</Filter>
+    </ClCompile>
+    <ClCompile Include="Timer\TIMER.cpp">
+      <Filter>Timer</Filter>
+    </ClCompile>
+    <ClCompile Include="Fps Counter\FPS_COUNTER.cpp">
+      <Filter>Fps Counter</Filter>
+    </ClCompile>
+    <ClCompile Include="Window\WINDOW_CheckGLError.cpp">
+      <Filter>Window</Filter>
+    </ClCompile>
+    <ClCompile Include="Window\WINDOW_HandleMessages.cpp">
+      <Filter>Window</Filter>
+    </ClCompile>
+    <ClCompile Include="Window\WINDOW_Init.cpp">
+      <Filter>Window</Filter>
+    </ClCompile>
+    <ClCompile Include="Window\WINDOW_InitDummy.cpp">
+      <Filter>Window</Filter>
+    </ClCompile>
+    <ClCompile Include="Window\WINDOW_MakeCurrent.cpp">
+      <Filter>Window</Filter>
+    </ClCompile>
+    <ClCompile Include="Window\WINDOW_SaveScreenshot.cpp">
+      <Filter>Window</Filter>
+    </ClCompile>
+    <ClCompile Include="Window\WINDOW_Shutdown.cpp">
+      <Filter>Window</Filter>
+    </ClCompile>
+    <ClCompile Include="Window\WINDOW_ShutdownDummy.cpp">
+      <Filter>Window</Filter>
+    </ClCompile>
+    <ClCompile Include="Window\WINDOW_UpdateInput.cpp">
+      <Filter>Window</Filter>
+    </ClCompile>
+    <ClCompile Include="Window\WINDOW_InitStandard.cpp">
+      <Filter>Window\Standard Window</Filter>
+    </ClCompile>
+    <ClCompile Include="Window\WINDOW_FindSamplesSupported.cpp">
+      <Filter>Window\Extended Window</Filter>
+    </ClCompile>
+    <ClCompile Include="Window\WINDOW_InitExtended.cpp">
+      <Filter>Window\Extended Window</Filter>
+    </ClCompile>
+    <ClCompile Include="Window\WINDOW_SelectModeProc.cpp">
+      <Filter>Window\Extended Window</Filter>
+    </ClCompile>
+    <ClCompile Include="Window\WGL Extensions\WGL_ARB_extensions_string_extension.cpp">
+      <Filter>Window\Extended Window\WGL Extensions</Filter>
+    </ClCompile>
+    <ClCompile Include="Window\WGL Extensions\WGL_ARB_multisample_extension.cpp">
+      <Filter>Window\Extended Window\WGL Extensions</Filter>
+    </ClCompile>
+    <ClCompile Include="Window\WGL Extensions\WGL_ARB_pixel_format_extension.cpp">
+      <Filter>Window\Extended Window\WGL Extensions</Filter>
+    </ClCompile>
+    <ClCompile Include="Window\WGL Extensions\WGL_EXT_swap_control_extension.cpp">
+      <Filter>Window\Extended Window\WGL Extensions</Filter>
+    </ClCompile>
+    <ClCompile Include="Bitmap Font\BITMAP_FONT.cpp">
+      <Filter>Bitmap Font</Filter>
+    </ClCompile>
+    <ClCompile Include="GL files\GLee.c">
+      <Filter>GL files</Filter>
+    </ClCompile>
+    <ClCompile Include="GL files\LoadProgram.cpp">
+      <Filter>GL files</Filter>
+    </ClCompile>
+    <ClCompile Include="Samples\GenerateSamples.cpp">
+      <Filter>Samples</Filter>
+    </ClCompile>
+    <ClCompile Include="Samples\SH.cpp">
+      <Filter>Samples</Filter>
+    </ClCompile>
+    <ClCompile Include="Light\Light.cpp">
+      <Filter>Light</Filter>
+    </ClCompile>
+    <ClCompile Include="Bounding Volumes\AA_BOUNDING_BOX.cpp">
+      <Filter>Bounding Volumes\AA_BOUNDING_BOX</Filter>
+    </ClCompile>
+    <ClCompile Include="Bounding Volumes\BOUNDING_SPHERE.cpp">
+      <Filter>Bounding Volumes\BOUNDING_SPHERE</Filter>
+    </ClCompile>
+    <ClCompile Include="Bounding Volumes\FRUSTUM.cpp">
+      <Filter>Bounding Volumes\FRUSTUM</Filter>
+    </ClCompile>
+    <ClCompile Include="Ray\RAY_IntersectsAABB.cpp">
+      <Filter>Ray</Filter>
+    </ClCompile>
+    <ClCompile Include="Ray\RAY_IntersectsSphere.cpp">
+      <Filter>Ray</Filter>
+    </ClCompile>
+    <ClCompile Include="Ray\RAY_IntersectsTriangle.cpp">
+      <Filter>Ray</Filter>
+    </ClCompile>
+    <ClCompile Include="SH Scene\SH_SCENE_Generate.cpp">
+      <Filter>SH Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="SH Scene\SH_SCENE_GenerateDirectCoeffs.cpp">
+      <Filter>SH Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="SH Scene\SH_SCENE_IsRayBlocked.cpp">
+      <Filter>SH Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="SH Scene\SH Object\SH_AA_BOX_Init.cpp">
+      <Filter>SH Scene\SH Object</Filter>
+    </ClCompile>
+    <ClCompile Include="SH Scene\SH Object\SH_SPHERE_Init.cpp">
+      <Filter>SH Scene\SH Object</Filter>
+    </ClCompile>
+    <ClCompile Include="SH Scene\SH Object\SH_TORUS_DoesRayHitObject.cpp">
+      <Filter>SH Scene\SH Object</Filter>
+    </ClCompile>
+    <ClCompile Include="SH Scene\SH Object\SH_TORUS_Init.cpp">
+      <Filter>SH Scene\SH Object</Filter>
+    </ClCompile>
+    <ClCompile Include="SH Rotation\ApplyMatrix.cpp">
+      <Filter>SH Rotation</Filter>
+    </ClCompile>
+    <ClCompile Include="SH Rotation\GetX90DegreeRotationMatrix.cpp">
+      <Filter>SH Rotation</Filter>
+    </ClCompile>
+    <ClCompile Include="SH Rotation\GetZRotationMatrix.cpp">
+      <Filter>SH Rotation</Filter>
+    </ClCompile>
+    <ClCompile Include="SH Rotation\RotateSHCoefficients.cpp">
+      <Filter>SH Rotation</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Main.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Maths\Maths.h">
+      <Filter>Maths</Filter>
+    </ClInclude>
+    <ClInclude Include="Maths\COLOR.h">
+      <Filter>Maths\Maths Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Maths\MATRIX4X4.h">
+      <Filter>Maths\Maths Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Maths\PLANE.h">
+      <Filter>Maths\Maths Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Maths\VECTOR2D.h">
+      <Filter>Maths\Maths Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Maths\VECTOR3D.h">
+      <Filter>Maths\Maths Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Maths\VECTOR4D.h">
+      <Filter>Maths\Maths Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Log\LOG.h">
+      <Filter>Log</Filter>
+    </ClInclude>
+    <ClInclude Include="Image\IMAGE.h">
+      <Filter>Image</Filter>
+    </ClInclude>
+    <ClInclude Include="Timer\TIMER.h">
+      <Filter>Timer</Filter>
+    </ClInclude>
+    <ClInclude Include="Fps Counter\FPS_COUNTER.h">
+      <Filter>Fps Counter</Filter>
+    </ClInclude>
+    <ClInclude Include="Window\WINDOW.h">
+      <Filter>Window</Filter>
+    </ClInclude>
+    <ClInclude Include="Window\WGL Extensions\WGL_ARB_extensions_string_extension.h">
+      <Filter>Window\Extended Window\WGL Extensions</Filter>
+    </ClInclude>
+    <ClInclude Include="Window\WGL Extensions\WGL_ARB_multisample_extension.h">
+      <Filter>Window\Extended Window\WGL Extensions</Filter>
+    </ClInclude>
+    <ClInclude Include="Window\WGL Extensions\WGL_ARB_pixel_format_extension.h">
+      <Filter>Window\Extended Window\WGL Extensions</Filter>
+    </ClInclude>
+    <ClInclude Include="Window\WGL Extensions\WGL_EXT_swap_control_extension.h">
+      <Filter>Window\Extended Window\WGL Extensions</Filter>
+    </ClInclude>
+    <ClInclude Include="Bitmap Font\BITMAP_FONT.h">
+      <Filter>Bitmap Font</Filter>
+    </ClInclude>
+    <ClInclude Include="Resources\resource.h">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GL files\GLee.h">
+      <Filter>GL files</Filter>
+    </ClInclude>
+    <ClInclude Include="GL files\LoadProgram.h">
+      <Filter>GL files</Filter>
+    </ClInclude>
+    <ClInclude Include="Samples\GenerateSamples.h">
+      <Filter>Samples</Filter>
+    </ClInclude>
+    <ClInclude Include="Samples\SAMPLE.h">
+      <Filter>Samples</Filter>
+    </ClInclude>
+    <ClInclude Include="Samples\SH.h">
+      <Filter>Samples</Filter>
+    </ClInclude>
+    <ClInclude Include="Light\Light.h">
+      <Filter>Light</Filter>
+    </ClInclude>
+    <ClInclude Include="Bounding Volumes\Bounding Volumes.h">
+      <Filter>Bounding Volumes</Filter>
+    </ClInclude>
+    <ClInclude Include="Bounding Volumes\BOUNDING_VOLUME.h">
+      <Filter>Bounding Volumes</Filter>
+    </ClInclude>
+    <ClInclude Include="Bounding Volumes\AA_BOUNDING_BOX.h">
+      <Filter>Bounding Volumes\AA_BOUNDING_BOX</Filter>
+    </ClInclude>
+    <ClInclude Include="Bounding Volumes\BOUNDING_SPHERE.h">
+      <Filter>Bounding Volumes\BOUNDING_SPHERE</Filter>
+    </ClInclude>
+    <ClInclude Include="Bounding Volumes\FRUSTUM.h">
+      <Filter>Bounding Volumes\FRUSTUM</Filter>
+    </ClInclude>
+    <ClInclude Include="Ray\RAY.h">
+      <Filter>Ray</Filter>
+    </ClInclude>
+    <ClInclude Include="SH Scene\SH_SCENE.h">
+      <Filter>SH Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="SH Scene\SH Vertex\SH_VERTEX.h">
+      <Filter>SH Scene\SH Vertex</Filter>
+    </ClInclude>
+    <ClInclude Include="SH Scene\SH Object\SH_AA_BOX.h">
+      <Filter>SH Scene\SH Object</Filter>
+    </ClInclude>
+    <ClInclude Include="SH Scene\SH Object\SH_OBJECT.h">
+      <Filter>SH Scene\SH Object</Filter>
+    </ClInclude>
+    <ClInclude Include="SH Scene\SH Object\SH_SPHERE.h">
+      <Filter>SH Scene\SH Object</Filter>
+    </ClInclude>
+    <ClInclude Include="SH Scene\SH Object\SH_TORUS.h">
+      <Filter>SH Scene\SH Object</Filter>
+    </ClInclude>
+    <ClInclude Include="SH Rotation\SH Rotation.h">
+      <Filter>SH Rotation</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Resources\Resolution.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

@@ -159,7 +159,7 @@ void
 drawmodel(void)
 {
     if (!pmodel) {
-        pmodel = glmReadOBJ("mesh/box_left.obj");
+        pmodel = glmReadOBJ("data/porsche.obj");
         if (!pmodel) exit(0);
         glmUnitize(pmodel);
         glmFacetNormals(pmodel);
