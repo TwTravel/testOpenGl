@@ -1,67 +1,7 @@
 
 #include "main.h"
 
-//  从文件中创建纹理
-void CreateTexture(UINT textureArray[], LPSTR strFileName, int textureID)
-{
-	AUX_RGBImageRec *pBitmap = NULL;
-	
-	if(!strFileName)									// 如果无此文件，则直接返回
-		return;
-
-	pBitmap = auxDIBImageLoad(strFileName);				// 装入位图，并保存数据
-	
-	if(pBitmap == NULL)									// 如果装入位图失败，则退出
-		exit(0);
-
-	// 生成纹理
-	glGenTextures(1, &textureArray[textureID]);
-
-	// 设置像素对齐格式
-	glPixelStorei (GL_UNPACK_ALIGNMENT, 1);
-
-	glBindTexture(GL_TEXTURE_2D, textureArray[textureID]);
-
-	gluBuild2DMipmaps(GL_TEXTURE_2D, 3, pBitmap->sizeX, pBitmap->sizeY, GL_RGB, GL_UNSIGNED_BYTE, pBitmap->data);
-
-	glTexParameteri(GL_TEXTURE_2D,GL_TEXTURE_MIN_FILTER,GL_LINEAR_MIPMAP_NEAREST);
-	glTexParameteri(GL_TEXTURE_2D,GL_TEXTURE_MAG_FILTER,GL_LINEAR_MIPMAP_LINEAR);
-
-	if (pBitmap)										// 释放位图占用的资源
-	{
-		if (pBitmap->data)						
-		{
-			free(pBitmap->data);				
-		}
-
-		free(pBitmap);					
-	}
-}
-
-void ChangeToFullScreen()
-{
-	DEVMODE dmSettings;								
-
-	memset(&dmSettings,0,sizeof(dmSettings));		
-
-	if(!EnumDisplaySettings(NULL,ENUM_CURRENT_SETTINGS,&dmSettings))
-	{
-		MessageBox(NULL, "Could Not Enum Display Settings", "Error", MB_OK);
-		return;
-	}
-
-	dmSettings.dmPelsWidth	= SCREEN_WIDTH;		
-	dmSettings.dmPelsHeight	= SCREEN_HEIGHT;	
-	
-	int result = ChangeDisplaySettings(&dmSettings,CDS_FULLSCREEN);	
-
-	if(result != DISP_CHANGE_SUCCESSFUL)
-	{
-
-		MessageBox(NULL, "Display Mode Not Compatible", "Error", MB_OK);
-		PostQuitMessage(0);
-	}
-}
+ 
 
 HWND CreateMyWindow(LPSTR strWindowName, int width, int height, DWORD dwStyle, bool bFullScreen, HINSTANCE hInstance)
 {
