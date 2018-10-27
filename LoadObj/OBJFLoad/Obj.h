@@ -53,8 +53,27 @@ private:
 
 	// 当前读入的对象是否是面
 	bool m_bJustReadAFace;
+	void normalizeVertices();
 };
 
+void CLoadObj::normalizeVertices()
+{
+	int i;
+	float maxv = -999.0;
+	for( i =0; i< m_pVertices.size(); i++)
+	{
+		if( fabs(m_pVertices[i].x) > maxv) maxv =  fabs(m_pVertices[i].x);
+		if( fabs(m_pVertices[i].y) > maxv) maxv =  fabs(m_pVertices[i].y);
+		if( fabs(m_pVertices[i].z) > maxv) maxv =  fabs(m_pVertices[i].z);
+	}
+	
+	for( i =0; i< m_pVertices.size(); i++)
+	{
+		 m_pVertices[i].x /= maxv;
+		 m_pVertices[i].y /= maxv; 
+		 m_pVertices[i].z /= maxv; 
+	}
+}
 //  下面的函数的功能是将obj文件的信息读入指定的模型中
 bool CLoadObj::ImportObj(t3DModel *pModel, char *strFileName)
 {
@@ -76,7 +95,8 @@ bool CLoadObj::ImportObj(t3DModel *pModel, char *strFileName)
 
 	// 读入文件信息
 	ReadObjFile(pModel);
-
+    normalizeVertices();
+	
 	// 计算顶点的法向量，用于光照
 	ComputeNormals(pModel);
 

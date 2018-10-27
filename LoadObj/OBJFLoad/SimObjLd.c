@@ -103,12 +103,42 @@ bool  g_bLighting     = true;
 float g_RotateX		  = 0.0f;		
 float g_RotationSpeed = 0.8f;	
 
+
+//##########################################################################################
+void SetMaterialAndLight()
+{
+   GLfloat mat_specular[] = { 1.0, 1.0, 1.0, 1.0 };
+   GLfloat mat_shininess[] = { 50.0 };
+
+   GLfloat light_position[] = { 1.0, 1.0, 1.0, 0.0 };  //最后一个参数为0表示该光源是directional的
+ //GLfloat light_position[] = { 1.0, 1.0, 1.0, 1.0 };  //最后一个参数非0表示该光源是positional的
+
+   GLfloat light_ambient[] = { 0.0, 1.0, 0.0, 1.0 };
+   GLfloat light_diffuse[] = { 0.0, 1.0, 0.0, 1.0 };
+   GLfloat light_specular[] = { 0.0, 1.0, 0.0, 1.0 };
+
+   glMaterialfv(GL_FRONT, GL_SPECULAR, mat_specular);
+   glMaterialfv(GL_FRONT, GL_SHININESS, mat_shininess);
+
+   glLightfv(GL_LIGHT0, GL_AMBIENT, light_ambient);
+   glLightfv(GL_LIGHT0, GL_DIFFUSE, light_diffuse);
+   glLightfv(GL_LIGHT0, GL_SPECULAR, light_specular);
+   glLightfv(GL_LIGHT0, GL_POSITION, light_position);
+
+   glEnable(GL_LIGHT0);       //开启GL_LIGHT0光源
+   glEnable(GL_LIGHTING);     //开启光照系统
+}
+ 
+//###########################################################################################
+//###########################################################################################
+//###########################################################################################
 //###########################################################################################
 //###########################################################################################
 //###########################################################################################
 
 void RenderScene() 
 {
+	SetMaterialAndLight();
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);	
 	glLoadIdentity();									
 
@@ -210,10 +240,29 @@ void InitializeOpenGL(int width, int height)
 {
 	 							
 }*/
+//###########################################################################################
+// Values that control the material properties.
+float Noemit[4] = {0.0, 0.0, 0.0, 1.0};
+float SphShininess = 50;	// Specular exponent for the spheres.
+float SphAmbDiff[6][4] = {		// The ambient/diffuse colors of the six spheres 
+	{0.5, 0.0, 0.0, 1.0},			// Red
+	{0.5, 0.5, 0.0, 1.0},			// Yellow
+	{0.0, 0.5, 0.0, 1.0},			// Green
+	{0.0, 0.5, 0.5, 1.0},			// Cyan
+	{0.0, 0.0, 0.5, 1.0},			// Blue
+	{0.5, 0.0, 0.5, 1.0}			// Magenta
+};
+float SphSpecular[4] = { 1, 1, 1, 1.0 };	
 
-//###########################################################################################
-//###########################################################################################
-//###########################################################################################
+// Lighting values
+float ambientLight[4] = {0.2, 0.2, 0.2, 1.0};
+float Lt0amb[4] = {0.3, 0.3, 0.3, 1.0};
+float Lt0diff[4] = {1.0, 1.0, 1.0, 1.0};
+float Lt0spec[4] = {1.0, 1.0, 1.0, 1.0};
+
+float zeroPos[4] = {0, 0, 0, 1};			// Origin (homogeneous representation)
+float dirI[4] = {1, 0, 0, 0};				// Direction of unit vector I (point at infinity)
+
 
 void myKeyboardFunc( unsigned char key, int x, int y );
 void mySpecialKeyFunc( int key, int x, int y );
@@ -248,6 +297,27 @@ void myKeyboardFunc( unsigned char key, int x, int y )
 		//drawScene();
 		RunMode = 0;
 		break;
+		
+	case  'v':								// 按下鼠标左键，改变绘制模式
+		
+		if(g_ViewMode == GL_TRIANGLES) {		
+			g_ViewMode = GL_LINE_STRIP;		
+		} else {
+			g_ViewMode = GL_TRIANGLES;	
+		}
+		break;
+
+	case  'l':								// 按下鼠标右键，改变光照模式
+		
+		g_bLighting = !g_bLighting;		
+
+		if(g_bLighting) {					
+			glEnable(GL_LIGHTING);			
+		} else {
+			glDisable(GL_LIGHTING);			
+		}
+		break;
+		
 	case 27:	// Escape key
 		exit(1);
 	}
@@ -289,18 +359,19 @@ void initRendering()
 	g_Loadobj.ImportObj(&g_3DModel, FILE_NAME);			// 将obj文件装入到模型结构体中
 
 	// 遍历所有的材质
-	/*for(int i = 0; i < g_3DModel.numOfMaterials; i++)
+	for(int i = 0; i < g_3DModel.numOfMaterials; i++)
 	{
 		// 判断是否是一个文件名
 		if(strlen(g_3DModel.pMaterials[i].strFile) > 0)
 		{
 			//  使用纹理文件名称来装入位图
-			CreateTexture(g_Texture, g_3DModel.pMaterials[i].strFile, i);			
+			//CreateTexture(g_Texture, g_3DModel.pMaterials[i].strFile, i);	
+			printf("hello %s\n", g_3DModel.pMaterials[i].strFile);
 		}
 
 		// 设置材质的纹理ID
 		g_3DModel.pMaterials[i].texureId = i;
-	}*/
+	}/**/
 
 	glEnable(GL_LIGHT0);								
 	glEnable(GL_LIGHTING);								
@@ -371,6 +442,7 @@ int main( int argc, char** argv )
     glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB | GLUT_DEPTH );
     
 	initRendering();
+	
 	
 	// Window position (from top corner), and size (width% and hieght)
     glutInitWindowPosition( 10, 60 );
