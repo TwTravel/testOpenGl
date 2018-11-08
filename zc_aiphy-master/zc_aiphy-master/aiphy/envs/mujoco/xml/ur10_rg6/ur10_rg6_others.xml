@@ -1,0 +1,47 @@
+
+<mujoco>
+    <equality>
+        <joint name="ur10:shoulder_pan_fix" active="false" joint1="ur10:shoulder_pan" class="ur10:equality_constraint"/>
+        <joint name="ur10:shoulder_lift_fix" active="false" joint1="ur10:shoulder_lift" class="ur10:equality_constraint"/>
+        <joint name="ur10:elbow_fix" active="false" joint1="ur10:elbow" class="ur10:equality_constraint"/>
+        <joint name="ur10:wrist_1_fix" active="false" joint1="ur10:wrist_1" class="ur10:equality_constraint"/>
+        <joint name="ur10:wrist_2_fix" active="false" joint1="ur10:wrist_2" class="ur10:equality_constraint"/>
+        <joint name="ur10:wrist_3_fix" active="false" joint1="ur10:wrist_3" class="ur10:equality_constraint"/>
+
+
+
+        <joint name="rg6:left_con0_fix" active="true" joint1="rg6:left_out_up_joint" joint2="rg6:right_in_up_joint" polycoef="0 -1 0 0 0" class="rg6:equality_constraint"/>
+        <joint name="rg6:left_con1_fix" active="true" joint1="rg6:right_in_up_joint" joint2="rg6:left_in_down_joint" class="rg6:equality_constraint"/>
+
+        <joint name="rg6:right_con0_fix" active="true" joint1="rg6:right_out_up_joint" joint2="rg6:right_in_up_joint" class="rg6:equality_constraint"/>
+        <joint name="rg6:right_con1_fix" active="true" joint1="rg6:right_in_up_joint" joint2="rg6:right_in_down_joint" polycoef="0 -1 0 0 0" class="rg6:equality_constraint"/>
+
+         <joint name="rg6:right_left_con_fix" active="true" joint1="rg6:right_in_up_joint" joint2="rg6:left_in_up_joint" polycoef="0 -1 0 0 0" class="rg6:equality_constraint"/>
+ 
+    </equality>
+
+
+    <actuator>
+        <position name='ur10:AP_shoulder_pan' ctrllimited="true" ctrlrange="-6.2831852 6.2831852" joint='ur10:shoulder_pan' kp="250000"/>
+        <position name='ur10:AP_shoulder_lift' ctrllimited="true" ctrlrange="-6.2831852 6.2831852" joint='ur10:shoulder_lift' kp="50000"/>
+        <position name='ur10:AP_elbow' ctrllimited="true" ctrlrange="-6.2831852 6.2831852" joint='ur10:elbow' kp="50000"/>
+        <position name='ur10:AP_wrist_1' ctrllimited="true" ctrlrange="-6.2831852 6.2831852" joint='ur10:wrist_1' kp="10000"/>
+        <position name='ur10:AP_wrist_2' ctrllimited="true" ctrlrange="-6.2831852 6.2831852" joint='ur10:wrist_2' kp="10000"/>
+        <position name='ur10:AP_wrist_3' ctrllimited="true" ctrlrange="-6.2831852 6.2831852" joint='ur10:wrist_3' kp="10000"/>
+        <position name="rg6:AP_right_in_up_joint" ctrllimited="true" ctrlrange="-0.75 0.48" joint='rg6:right_in_up_joint' kp="40"/>
+<!--         <velocity name='ur10:AV_shoulder_pan' ctrllimited="true" ctrlrange="-1.0 1.0" joint='ur10:shoulder_pan' kv="100"/>
+        <velocity name='ur10:AV_shoulder_lift' ctrllimited="true" ctrlrange="-1.0 1.0" joint='ur10:shoulder_lift' kv="100"/>
+        <velocity name='ur10:AV_elbow' ctrllimited="true" ctrlrange="-1.0 1.0" joint='ur10:elbow' kv="10"/>
+        <velocity name='ur10:AV_wrist_1' ctrllimited="true" ctrlrange="-1.0 1.0" joint='ur10:wrist_1' kv="10"/>
+        <velocity name='ur10:AV_wrist_2' ctrllimited="true" ctrlrange="-1.0 1.0" joint='ur10:wrist_2' kv="10"/>
+        <velocity name='ur10:AV_wrist_3' ctrllimited="true" ctrlrange="-1.0 1.0" joint='ur10:wrist_3' kv="10"/> -->
+      <!--   <position name="rg6:left" ctrllimited="true" ctrlrange="-0.75 0.75" joint='rg6:left_in_up_joint' kp="20"/> -->
+    </actuator>
+
+    <contact>
+        <exclude  body1="rg6:body_link" body2="rg6:left_link" />
+        <exclude  body1="rg6:body_link" body2="rg6:right_link" />
+        <exclude  body1="rg6:left_link" body2="rg6:right_link" />
+    </contact> 
+
+</mujoco>

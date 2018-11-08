@@ -295,6 +295,7 @@ screen_reshape(int width, int height)
 	glRotatef(g_RotateX, 0, 1.0f, 0);
 	glRotatef(g_RotateY, 1.0f, 0, 0);
 	glRotatef(g_RotateZ, 0, 0, 1.0f);
+	glScalef(0.5, 0.5, 0.5);
     /*if (swapped) {
         glRotatef(rotation[0].value, rotation[1].value, 
             rotation[2].value, rotation[3].value);

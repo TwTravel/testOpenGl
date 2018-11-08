@@ -1,0 +1,65 @@
+
+<mujoco>
+    <mesh name="ur10:base"           file="ur10_collision/base.stl"     />
+    <mesh name="ur10:shoulder"       file="ur10_collision/shoulder.stl" />
+    <mesh name="ur10:upperarm"       file="ur10_collision/upperarm.stl" />
+    <mesh name="ur10:forearm"        file="ur10_collision/forearm.stl"  />
+    <mesh name="ur10:wrist1"         file="ur10_collision/wrist1.stl"   />
+    <mesh name="ur10:wrist2"         file="ur10_collision/wrist2.stl"   />
+    <mesh name="ur10:wrist3"         file="ur10_collision/wrist3.stl"   />
+
+    <mesh name="ur10:base_v0"           file="ur10_visual/base/base_0.stl"     />
+    <mesh name="ur10:shoulder_v0"       file="ur10_visual/shoulder/shoulder_0.stl" />
+    <mesh name="ur10:shoulder_v1"       file="ur10_visual/shoulder/shoulder_1.stl" />
+    <mesh name="ur10:shoulder_v2"       file="ur10_visual/shoulder/shoulder_2.stl" />
+    <mesh name="ur10:upperarm_v0"       file="ur10_visual/upperarm/upperarm_0.stl" />
+    <mesh name="ur10:upperarm_v1"       file="ur10_visual/upperarm/upperarm_1.stl" />
+    <mesh name="ur10:upperarm_v2"       file="ur10_visual/upperarm/upperarm_2.stl" />
+    <mesh name="ur10:upperarm_v3"       file="ur10_visual/upperarm/upperarm_3.stl" />
+    <mesh name="ur10:forearm_v0"        file="ur10_visual/forearm/forearm_0.stl"  />
+    <mesh name="ur10:forearm_v1"        file="ur10_visual/forearm/forearm_1.stl"  />
+    <mesh name="ur10:forearm_v2"        file="ur10_visual/forearm/forearm_2.stl"  />
+    <mesh name="ur10:forearm_v3"        file="ur10_visual/forearm/forearm_3.stl"  />
+    <mesh name="ur10:forearm_v4"        file="ur10_visual/forearm/forearm_4.stl"  />
+    <mesh name="ur10:wrist1_v0"         file="ur10_visual/wrist1/wrist1_0.stl"   />
+    <mesh name="ur10:wrist1_v1"         file="ur10_visual/wrist1/wrist1_1.stl"   />
+    <mesh name="ur10:wrist1_v2"         file="ur10_visual/wrist1/wrist1_2.stl"   />
+    <mesh name="ur10:wrist2_v0"         file="ur10_visual/wrist2/wrist2_0.stl"   />
+    <mesh name="ur10:wrist2_v1"         file="ur10_visual/wrist2/wrist2_1.stl"   />
+    <mesh name="ur10:wrist2_v2"         file="ur10_visual/wrist2/wrist2_2.stl"   />
+    <mesh name="ur10:wrist3_v0"         file="ur10_visual/wrist3/wrist3_0.stl"   />
+
+    <mesh file="rg6_gripper/Part011.stl" name="Part011"/>
+    <mesh file="rg6_gripper/Part008.stl" name="Part008"/>
+    <mesh file="rg6_gripper/Part024.stl" name="Part024"/>
+    <mesh file="rg6_gripper/Part004.stl" name="Part004"/>
+    <mesh file="rg6_gripper/Part023.stl" name="Part023"/>
+    <mesh file="rg6_gripper/Part000.stl" name="Part000"/>
+    <mesh file="rg6_gripper/Part021.stl" name="Part021"/>
+    <mesh file="rg6_gripper/Part003.stl" name="Part003"/>
+    <mesh file="rg6_gripper/Part009.stl" name="Part009"/>
+    <mesh file="rg6_gripper/Part017.stl" name="Part017"/>
+    <mesh file="rg6_gripper/Part010.stl" name="Part010"/>
+    <mesh file="rg6_gripper/Part020.stl" name="Part020"/>
+    <mesh file="rg6_gripper/Part025.stl" name="Part025"/>
+    <mesh file="rg6_gripper/Part012.stl" name="Part012"/>
+    <mesh file="rg6_gripper/Part018.stl" name="Part018"/>
+    <mesh file="rg6_gripper/Part014.stl" name="Part014"/>
+    <mesh file="rg6_gripper/Part019.stl" name="Part019"/>
+    <mesh file="rg6_gripper/Part027.stl" name="Part027"/>
+    <mesh file="rg6_gripper/Part005.stl" name="Part005"/>
+    <mesh file="rg6_gripper/Part026.stl" name="Part026"/>
+    <mesh file="rg6_gripper/Part015.stl" name="Part015"/>
+    <mesh file="rg6_gripper/Part016.stl" name="Part016"/>
+    <mesh file="rg6_gripper/Part022.stl" name="Part022"/>
+    <mesh file="rg6_gripper/Part028.stl" name="Part028"/>
+    <mesh file="rg6_gripper/Part007.stl" name="Part007"/>
+    <mesh file="rg6_gripper/Part013.stl" name="Part013"/>
+    <mesh file="rg6_gripper/Part006.stl" name="Part006"/>
+    <mesh file="rg6_gripper/rg6_single_bracket.stl" name="rg6_single_bracket"/>
+
+    <texture name="ur10:tex"     type="2d"       builtin="flat" height="32" width="32" rgb1="0.45 0.45 0.45" />
+    <texture name="metal"        type="cube"     file="metal2.png"/>
+    <material name="bench:mat"      texture="metal"   shininess="0.1" specular="0.5" reflectance="0.2"/>
+
+</mujoco>

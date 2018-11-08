@@ -1,0 +1,253 @@
+<mujoco model="ur10_rg6">
+  <compiler angle="radian"
+            texturedir="textures/"
+            meshdir="mesh/"/>
+
+  <option  impratio="10" timestep="0.0002"/>
+
+  <visual>
+    <map znear="0.02" zfar="50"/>
+  </visual>
+
+
+  <default>
+    <include file="ur10_rg6/ur10_rg6_default.xml"></include>
+    <default class="env_body">
+      <geom contype="1" conaffinity="1" condim="4" friction="1 0.05 0.0001" solimp=".99 .99 .001" solref="0.006 1"/>
+    </default>
+
+  </default>
+
+
+  <asset>
+    <!-- <mesh file="table/table.stl" name="table"/> -->
+    <texture name="wood:tex"   file='wood3.png' type='2d'/>
+    <include file="ur10_rg6/ur10_rg6_asset.xml"></include>
+    <texture name="sky:tex"     type="skybox"   builtin="gradient" width="100" height="100" rgb1="1 1 1" rgb2="0.3 0.3 0.8" />
+    <texture name="floor:tex"   type="2d"        builtin="checker" rgb1=".2 .3 .4" rgb2=".1 .2 .3" width="100" height="100" />
+    <material name='floor:mat'      texture="floor:tex"  shininess="0.8" texrepeat="10 10" specular="0.7"  reflectance="0" />
+    <material name="wood:mat"   texture="wood:tex"  texrepeat="1 1"  shininess="0.9" specular="0.75" reflectance="0"/>
+    <texture name="box:tex" type="cube" fileback="box_bottom.png" filefront='box_up.png' fileup='box_front.png' fileleft="box_back.png" filedown="box_left.png" fileright="box_right.png" />   
+    <material name="box:mat" texture="box:tex" texrepeat="1 1" />
+    <mesh file="shape_box/circle.stl" name="circle"/>
+    <mesh file="shape_box/half_circle.stl" name="half_circle"/>
+    <mesh file="shape_box/square.stl" name="square"/>
+    <mesh file="shape_box/triangle.stl" name="triangle"/>
+    <mesh file="shape_box/octangle.stl" name="octangle"/>
+    <mesh file="shape_box/pentagon.stl" name="pentagon"/>
+    <mesh file="shape_box/quartercircle.stl" name="quartercircle"/>
+    <mesh file="shape_box/rectangle.stl" name="rectangle"/>
+    <mesh file="shape_box/trapezium.stl" name="trapezium"/>
+    <mesh file="shape_box/diamond.stl" name="diamond"/>
+    <mesh file="shape_box/eq_triangle.stl" name="eq_triangle"/>
+    <mesh file="shape_box/hexagon.stl" name="hexagon"/>
+    <mesh file="shape_box/cross/cross_0.stl" name="cross_0"/>
+    <mesh file="shape_box/cross/cross_1.stl" name="cross_1"/>
+    <mesh file="shape_box/cross/cross_2.stl" name="cross_2"/>
+    <mesh file="shape_box/cross/cross_3.stl" name="cross_3"/>
+    <mesh file="shape_box/cross/cross_4.stl" name="cross_4"/>
+    <mesh file="shape_box/cross_spire/cross_spire_0.stl" name="cross_spire_0"/>
+    <mesh file="shape_box/cross_spire/cross_spire_1.stl" name="cross_spire_1"/>
+    <mesh file="shape_box/cross_spire/cross_spire_2.stl" name="cross_spire_2"/>
+    <mesh file="shape_box/cross_spire/cross_spire_3.stl" name="cross_spire_3"/>
+    <mesh file="shape_box/cross_spire/cross_spire_4.stl" name="cross_spire_4"/>
+    <mesh file="shape_box/lshape/lshape_0.stl" name="lshape_0"/>
+    <mesh file="shape_box/lshape/lshape_1.stl" name="lshape_1"/>
+    <mesh file="shape_box/lshape.stl" name="lshape"/>
+    <mesh file="shape_box/oval.stl" name="oval"/>
+    <mesh file="shape_box/box_bite.stl" name="box_bite"/>
+    <mesh file="shape_box/shield.stl" name="shield"/>
+    <mesh file="shape_box/heart/heart_0.stl" name="heart_0"/>
+    <mesh file="shape_box/heart/heart_1.stl" name="heart_1"/>
+  </asset>
+
+  <worldbody>
+    <camera name="cam0" pos="0.0 1.1 1.6" quat="0.0 0.0 -0.216 -0.976" fovy="60.0"/>
+    <camera name="cam1" pos="0.35 0.75 1.6" quat="0.690 0.153 0.153 0.690" fovy="60.0"/>
+    <camera name="cam2" pos="-0.35 0.75 1.6" quat="0.690 0.153 -0.153 -0.690" fovy="60.0"/>
+    <light name="light3" mode="targetbody" target="bench" directional="true" pos="1 1 3" castshadow='false'/>
+    <geom name='floor' material="floor:mat" pos='0 0 0' size='2.5 2.5 0.1'  type='plane' />
+    <!-- <geom mesh="table" name="table" type="mesh" material="wood:mat" pos='1.8 0.3 -0.1118' quat="1 0 0 0" class="env_body" condim = "4" /> -->
+    <geom type="box"  size="0.4 0.8 0.38"    pos="0.9 0 0.38" material="wood:mat" class="env_body" condim = "4"/>
+    <include file="ur10_rg6/ur10_rg6_body.xml"></include>
+    <!-- <body name='coordinate'>
+      <site  pos='1 0 0' rgba='1 0 0 1' type='sphere' size='0.1'  ></site>
+      <site  pos='0 1 0' rgba='0 1 0 1' type='sphere' size='0.1'  ></site>
+      <site  pos='0 0 1' rgba='0 0 1 1' type='sphere' size='0.1'  ></site>
+      <site  pos='0 0 0' rgba='1 1 1 1' type='sphere' size='0.1'  ></site>
+      <site  pos='0.6  0 0.8' rgba='0 0 0 1' type='sphere' size='0.01'  ></site>
+      <site  pos='0.75 0 0.8' rgba='0 0 0 1' type='sphere' size='0.01'  ></site>
+      <site  pos='0.9  0 0.8' rgba='0 0 0 1' type='sphere' size='0.01'  ></site>
+      <site  pos='0.6 0 0.95' rgba='0 0 0 1' type='sphere' size='0.01'  ></site>
+      <site  pos='0.75 0 0.95' rgba='1 0 0 1' type='sphere' size='0.01'  ></site>
+      <site  pos='0.9 0 0.95' rgba='0 0 0 1' type='sphere' size='0.01'  ></site>
+      <site  pos='0.6 0 1.1' rgba='0 0 0 1' type='sphere' size='0.01'  ></site>
+      <site  pos='0.75 0 1.1' rgba='0 0 0 1' type='sphere' size='0.01'  ></site>
+      <site  pos='0.9 0 1.1' rgba='0 0 0 1' type='sphere' size='0.01'  ></site>
+
+      <site  pos='0.6 0.2  0.8' rgba='1 0 0 1' type='sphere' size='0.01'  ></site>
+      <site  pos='0.75 0.2  0.8' rgba='0 0 0 1' type='sphere' size='0.01'  ></site>
+      <site  pos='0.9 0.2  0.8' rgba='1 0 0 1' type='sphere' size='0.01'  ></site>
+      <site  pos='0.6 0.2  0.95' rgba='0 0 0 1' type='sphere' size='0.01'  ></site>
+      <site  pos='0.75 0.2  0.95' rgba='0 0 0 1' type='sphere' size='0.01'  ></site>
+      <site  pos='0.9 0.2 0.95' rgba='0 0 0 1' type='sphere' size='0.01'  ></site>
+      <site  pos='0.6 0.2  1.1' rgba='1 0 0 1' type='sphere' size='0.01'  ></site>
+      <site  pos='0.75 0.2  1.1' rgba='0 0 0 1' type='sphere' size='0.01'  ></site>
+      <site  pos='0.9 0.2 1.1' rgba='1 0 0 1' type='sphere' size='0.01'  ></site>
+
+      <site  pos='0.6 -0.2  0.8' rgba='1 0 0 1' type='sphere' size='0.01'  ></site>
+      <site  pos='0.75 -0.2 0.8' rgba='0 0 0 1' type='sphere' size='0.01'  ></site>
+      <site  pos='0.9 -0.2 0.8' rgba='1 0 0 1' type='sphere' size='0.01'  ></site>
+      <site  pos='0.6 -0.2  0.95' rgba='0 0 0 1' type='sphere' size='0.01'  ></site>
+      <site  pos='0.75 -0.2  0.95' rgba='0 0 0 1' type='sphere' size='0.01'  ></site>
+      <site  pos='0.9 -0.2  0.95' rgba='0 0 0 1' type='sphere' size='0.01'  ></site>
+      <site  pos='0.6 -0.2  1.1' rgba='1 0 0 1' type='sphere' size='0.01'  ></site>
+      <site  pos='0.75 -0.2  1.1' rgba='0 0 0 1' type='sphere' size='0.01'  ></site>
+      <site  pos='0.9 -0.2  1.1' rgba='1 0 0 1' type='sphere' size='0.01'  ></site>
+    </body> -->
+
+    <body name="circle" pos="0.75 0 0.775">
+      <joint type="free" name="circle" armature="1"/>
+      <geom mesh="circle" name="circle" type="mesh" class="env_body" condim = "4" rgba="0.9137 0.8275 0.1176 1.0"/>
+    </body>
+
+    <body name="half_circle" pos="0.75 0.05 0.775">
+      <joint type="free" name="half_circle" armature="1"/>
+      <geom mesh="half_circle" name="half_circle" type="mesh" class="env_body" condim = "4" rgba="0.2275  0.7765  0.8980 1.0"/>
+    </body>
+
+    <body name="square" pos="0.75 0.1 0.775">
+      <joint type="free" name="square" armature="2"/>
+      <geom mesh="square" name="square" type="mesh" class="env_body" condim = "4" rgba="0.1333  0.5412  0.8196 1.0"/>
+    </body>
+
+    <body name="triangle" pos="0.8 0.0 0.775">
+      <joint type="free" name="triangle" armature="1"/>
+      <geom mesh="triangle" name="triangle" type="mesh" class="env_body" condim = "4" rgba="0.9059 0.3176  0.1804 1.0"/>
+    </body>
+
+
+    <body name="octangle" pos="0.8 0.05 0.775">
+      <joint type="free" name="octangle" armature="1"/>
+      <geom mesh="octangle" name="octangle" type="mesh" class="env_body" condim = "4" rgba="0.9412  0.8471  0.1176 1.0"/>
+    </body>
+
+    <body name="trapezium" pos="0.8 0.1 0.775">
+      <joint type="free" name="trapezium" armature="1"/>
+      <geom mesh="trapezium" name="trapezium" type="mesh" class="env_body" condim = "4" rgba="0.8588  0.4078  0.4706 1.0"/>
+    </body>
+
+    <body name="pentagon" pos="0.8 0.15 0.775">
+      <joint type="free" name="pentagon" armature="1"/>
+      <geom mesh="pentagon" name="pentagon" type="mesh" class="env_body" condim = "4" rgba="0.8863  0.5686  0.2627 1.0"/>
+    </body>
+
+    <body name="quartercircle" pos="0.85 0.0 0.775">
+      <joint type="free" name="quartercircle" armature="1"/>
+      <geom mesh="quartercircle" name="quartercircle" type="mesh" class="env_body" condim = "4" rgba="0.8392 0.3725  0.4510 1.0"/>
+    </body>
+
+    <body name="rectangle" pos="0.85 0.05 0.775">
+      <joint type="free" name="rectangle" armature="1"/>
+      <geom mesh="rectangle" name="rectangle" type="mesh" class="env_body" condim = "4" rgba="0.8431 0.3608  0.2196 1.0"/>
+    </body>
+
+    <body name="diamond" pos="0.85 0.1 0.775">
+      <joint type="free" name="diamond" armature="1"/>
+      <geom mesh="diamond" name="diamond" type="mesh" class="env_body" condim = "4" rgba="0.6471 0.8157  0.4745 1.0"/>
+    </body>
+
+    <body name="cross_spire" pos="0.85 0.15 0.775">
+      <joint type="free" name="cross_spire" armature="1"/>
+      <geom mesh="cross_spire_0" name="cross_spire_0" type="mesh" class="env_body" condim = "4" rgba="0.6471 0.8157  0.4745 1.0"/>
+      <geom mesh="cross_spire_1" name="cross_spire_1" type="mesh" class="env_body" condim = "4" rgba="0.6471 0.8157  0.4745 1.0"/>
+      <geom mesh="cross_spire_2" name="cross_spire_2" type="mesh" class="env_body" condim = "4" rgba="0.6471 0.8157  0.4745 1.0"/>
+      <geom mesh="cross_spire_3" name="cross_spire_3" type="mesh" class="env_body" condim = "4" rgba="0.6471 0.8157  0.4745 1.0"/>
+      <geom mesh="cross_spire_4" name="cross_spire_4" type="mesh" class="env_body" condim = "4" rgba="0.6471 0.8157  0.4745 1.0"/>
+    </body>
+
+     <body name="oval" pos="0.9 0.05 0.775">
+      <joint type="free" name="oval" armature="1"/>
+      <geom mesh="oval" name="oval" type="mesh" class="env_body" condim = "4" rgba="0.6510 0.2471  0.4627 1.0 "/>
+    </body>
+   
+
+    <body name="eq_triangle" pos="0.9 0.1 0.775">
+      <joint type="free" name="eq_triangle" armature="1"/>
+      <geom mesh="eq_triangle" name="eq_triangle" type="mesh" class="env_body" condim = "4" rgba="0.6510 0.2471  0.4627 1.0 "/>
+    </body>
+
+    <body name="shield" pos="0.9 0.15 0.775">
+      <joint type="free" name="shield" armature="1"/>
+      <geom mesh="shield" name="shield" type="mesh" class="env_body" condim = "4" rgba="0.8627  0.4275  0.2745 1.0 "/>
+    </body>
+
+     <body name="box_bite" pos="0.95 0.05 0.775">
+      <joint type="free" name="box_bite" armature="1"/>
+      <geom mesh="box_bite" name="box_bite" type="mesh" class="env_body" condim = "4" rgba="0.6510 0.8118  0.8471 1.0"/>
+    </body>
+
+    <body name="hexagon" pos="0.95 0.1 0.775">
+      <joint type="free" name="hexagon" armature="1"/>
+      <geom mesh="hexagon" name="hexagon" type="mesh" class="env_body" condim = "4" rgba="0.7725  0.1922  0.1451 1.0"/>
+    </body>
+
+    <body name="cross" pos="0.95 0.15 0.775">
+      <joint type="free" name="cross" armature="1"/>
+      <geom mesh="cross_0" name="cross_0" type="mesh" class="env_body" condim = "4" rgba="0.7843  0.2  0.1490 1.0 "/>
+      <geom mesh="cross_1" name="cross_1" type="mesh" class="env_body" condim = "4" rgba="0.7843  0.2  0.1490 1.0 "/>
+      <geom mesh="cross_2" name="cross_2" type="mesh" class="env_body" condim = "4" rgba="0.7843  0.2  0.1490 1.0 "/>
+      <geom mesh="cross_3" name="cross_3" type="mesh" class="env_body" condim = "4" rgba="0.7843  0.2  0.1490 1.0 "/>
+      <geom mesh="cross_4" name="cross_4" type="mesh" class="env_body" condim = "4" rgba="0.7843  0.2  0.1490 1.0 "/>
+    </body>
+
+    <body name="heart" pos="0.90 0.0 0.775">
+      <joint type="free" name="heart" armature="1"/>
+      <geom mesh="heart_0" name="heart_0" type="mesh" class="env_body" condim = "4" rgba="0.3922  0.2863  0.6588 1.0"/>
+      <geom mesh="heart_1" name="heart_1" type="mesh" class="env_body" condim = "4" rgba="0.3922  0.2863  0.6588 1.0"/>
+    </body>
+
+   
+
+    <body name="lshape" pos="0.95 0.0 0.775">
+      <joint type="free" name="lshape" armature="1"/>
+      <geom mesh="lshape_0" name="lshape_0" type="mesh" class="env_body" condim = "4" rgba="0.3804  0.7255  0.8510 1.0"/>
+      <geom mesh="lshape_1" name="lshape_1" type="mesh" class="env_body" condim = "4" rgba="0.3804  0.7255  0.8510 1.0"/>
+    </body>
+  
+    <!--         <site pos="1 0 0" rgba="1 0 0 1" size=".1 .1 .1" type="box"/>
+         <site pos="0 1 0" rgba="0 1 0 1" size=".1 .1 .1" type="box"/>
+         <site pos="0 0 1" rgba="0 0 1 1" size=".1 .1 .1" type="box"/> -->
+
+    <body name="target" pos="0.8 -0.2 0.833 " >
+      <joint type="free" name="target_box" armature="2"/>
+      <geom type="box" size="0.073 0.073 0.073" density="100" material="box:mat"/>
+
+      <body name="target_point" pos="0 0 0.16" quat="0 -1 0 0" >
+
+
+        <site  pos='0.1 0 0' rgba='1 0 0 0' type='sphere' size='0.01'  ></site>
+
+
+
+        <site  pos='0 0.1 0' rgba='0 1 0 0' type='sphere' size='0.01'  ></site>
+        <site  pos='0 0  0.1' rgba='0 0 1 0' type='sphere' size='0.01'  ></site>
+        <site  size="0.01 0.01 0.01" rgba="1 1 1 0" type="sphere"></site>
+      </body>
+    </body>
+
+    <!-- <site name="target_site" pos="-1 0 0.9" size="0.02 0.02 0.02" rgba="0 0 1 1" type="sphere"></site> -->
+
+    <!-- <site name="gripper_site" pos="7.99738305e-01 -4.23387596e-02 7.95015658e-01" size="0.02 0.02 0.02" rgba="1 0 0 1" type="sphere"></site>
+
+<site name="object_site" pos="0.783528055 -0.0349699258 0.803405112," size="0.02 0.02 0.02" rgba="0 1 0 1" type="sphere"></site> -->
+
+<!--     <body name="object" pos="-0.25 0.5 0.6 " >
+      <joint name="object:joint" type="free" damping="0.01" />
+      <geom  type="box" size=".025 .025 .025"  rgba="0.9 0.2 0.2 1" class="env_body" density="100"/>
+    </body> -->
+    <!-- <include file="holder/holder_body.xml"></include>-->
+  </worldbody>
+  <include file="ur10_rg6/ur10_rg6_others.xml"></include>
+
+</mujoco>

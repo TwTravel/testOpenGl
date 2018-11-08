@@ -1,0 +1,187 @@
+<mujoco>
+    <body name="bench" pos="0.0 -1.0 0.115" >
+
+        <geom type="box" pos="0 0 -0.015" size="0.45 0.1 0.08" rgba="0.3921569 0.5427451 0.64 1"/>
+        <geom type="box" pos="0 0.275 -0.015" size="0.1 0.175 0.08" rgba="0.3921569 0.5427451 0.64 1"/>
+        <geom type="box" pos="0 -0.275 -0.015" size="0.1 0.175 0.08" rgba="0.3921569 0.5427451 0.64 1"/>
+        <geom type="mesh" mesh="ur10:base_v0" pos="0 0 0.065" rgba="0.7 0.7 0.7 1"/>
+        <geom type="cylinder" pos="0 0 0.5425" size="0.05 0.4575" rgba="0.7 0.7 0.7 1"/>
+        <geom type="mesh" mesh="ur10:base_v0" pos="0 0 0.87" quat="0 0 1 0" rgba="0.7 0.7 0.7 1"/>
+        <body name="ur10:base_link" pos="0 0 0.87" childclass="ur10:arm">
+            <!-- <geom type="sphere" pos="0.2 0 0" size="0.05" rgba="1 0 0 1"/> -->
+            <geom type="mesh"  mesh="ur10:base"/>
+            <geom type="mesh"  mesh="ur10:base_v0" class="ur10:visual" rgba="0.371451 0.371451 0.371451 1"/>
+            <body name="ur10:shoulder_link" pos="0 0 0.1273">
+                <joint name="ur10:shoulder_pan" pos="0 0 0" axis="0 0 1" limited="true" range="-6.283185307179586 6.283185307179586"/>
+                <geom type="mesh"  mesh="ur10:shoulder"/>
+                <geom type="mesh"  mesh="ur10:shoulder_v0" class="ur10:visual" rgba="0.2227451 0.2227451 0.2227451 1"/>
+                <geom type="mesh"  mesh="ur10:shoulder_v1" class="ur10:visual" rgba="0.3921569 0.5427451 0.64 1"/>
+                <geom type="mesh"  mesh="ur10:shoulder_v2" class="ur10:visual" rgba="0.4643137 0.4643137 0.4643137 1"/>
+                <body name="ur10:upper_arm_link" pos="0 0.220941 0">
+                    <joint name="ur10:shoulder_lift" pos="0 0 0" axis="0 1 0" limited="true" range="-6.283185307179586 6.283185307179586" ref="-1.5707963267948966"/>
+                    <geom type="mesh"  mesh="ur10:upperarm"/>
+                    <geom type="mesh"  mesh="ur10:upperarm_v0" class="ur10:visual" rgba="0.2227451 0.2227451 0.2227451 1"/>
+                    <geom type="mesh"  mesh="ur10:upperarm_v1" class="ur10:visual" rgba="0.3921569 0.5427451 0.64 1"/>
+                    <geom type="mesh"  mesh="ur10:upperarm_v2" class="ur10:visual" rgba="0.4643137 0.4643137 0.4643137 1"/>
+                    <geom type="mesh"  mesh="ur10:upperarm_v3" class="ur10:visual" rgba="0.6563138 0.6563138 0.6563138 1"/>
+                    <body name="ur10:forearm_link" pos="0 -0.1719 0.612">
+                        <joint name="ur10:elbow" pos="0 0 0" axis="0 1 0" limited="true" range="-6.2831852 6.2831852" />
+                        <geom type="mesh"  mesh="ur10:forearm"/>
+                        <geom type="mesh"  mesh="ur10:forearm_v0" class="ur10:visual" rgba="0.2227451 0.2227451 0.2227451 1"/>
+                        <geom type="mesh"  mesh="ur10:forearm_v1" class="ur10:visual" rgba="0.3921569 0.5427451 0.64 1"/>
+                        <geom type="mesh"  mesh="ur10:forearm_v2" class="ur10:visual" rgba="0.4643137 0.4643137 0.4643137 1"/>
+                        <geom type="mesh"  mesh="ur10:forearm_v3" class="ur10:visual" rgba="0.6563138 0.6563138 0.6563138 1"/>
+                        <geom type="mesh"  mesh="ur10:forearm_v4" class="ur10:visual" rgba="0.08031373 0.08031373 0.08031373 1"/>
+                        <body name="ur10:wrist_1_link" pos="0 0 0.5723" childclass="ur10:wrist">
+                            <joint name="ur10:wrist_1" pos="0 0 0" axis="0 1 0" limited="true" range="-6.283185307179586 6.283185307179586" ref="-1.5707963267948966" />
+                            <geom type="mesh" mesh="ur10:wrist1"/>
+                            <geom type="mesh" mesh="ur10:wrist1_v0" class="ur10:visual" rgba="0.2227451 0.2227451 0.2227451 1"/>
+                            <geom type="mesh" mesh="ur10:wrist1_v1" class="ur10:visual" rgba="0.3921569 0.5427451 0.64 1"/>
+                            <geom type="mesh" mesh="ur10:wrist1_v2" class="ur10:visual" rgba="0.4643137 0.4643137 0.4643137 1"/>
+                            <body name="ur10:wrist_2_link" pos="0 0.1149 0">
+                                <joint name="ur10:wrist_2" pos="0 0 0" axis="0 0 1" limited="true" range="-6.2831852 6.2831852" />
+                                <geom type="mesh"  mesh="ur10:wrist2"/>
+                                <geom type="mesh"  mesh="ur10:wrist2_v0" class="ur10:visual" rgba="0.2227451 0.2227451 0.2227451 1"/>
+                                <geom type="mesh"  mesh="ur10:wrist2_v1" class="ur10:visual" rgba="0.3921569 0.5427451 0.64 1"/>
+                                <geom type="mesh"  mesh="ur10:wrist2_v2" class="ur10:visual" rgba="0.4643137 0.4643137 0.4643137 1"/>
+                                <body name="ur10:wrist_3_link" pos="0 0 0.1157">
+                                    <joint name="ur10:wrist_3" pos="0 0 0" axis="0 1 0" limited="true" range="-6.283185307179586 6.283185307179586" ref="-1.5707963267948966" />
+                                    <geom type="mesh"  mesh="ur10:wrist3"/>
+                                    <geom type="mesh"  mesh="ur10:wrist3_v0" class="ur10:visual" rgba="0.4643137 0.4643137 0.4643137 1"/>
+                                    <body name="ur10:ee_link" pos="0 0.0922 0" quat="0.707107 -0.707107 0 0">
+                                        <body name='gripper:target' pos="0.0 0.0 0.23" >
+                                             <site  type='sphere' size=".01" rgba="0 1 0 1"/>
+                                        </body>
+
+                                        <geom size="0.005 0.005 0.005" pos="-0.01 0 0" type="box" />
+                                        <body name='rg6_base' pos='0.01 0 0.047' quat="-0.5 0.5 -0.5 0.5">
+                                            <geom mesh="rg6_single_bracket" name="rg6_single_bracket" pos="0 0.049 -0.01" quat="0 1 0 0" class="rg6:visual"/>
+                                            <geom mesh="Part000" name="rg6_center_0" type="mesh" class="rg6:visual"/>
+                                            <geom mesh="Part005" name="rg6_center_1" type="mesh" class="rg6:visual"/>
+                                            <body name="rg6:body_link">
+                                                 <geom type="box" size="0.03 0.065 0.02" pos="0 -0.025 -0.01" class="rg6:contact"/>
+                                            </body>
+                                           
+
+                                            <body name="rg6:right_in_link">
+                                                <joint name="rg6:right_in_up_joint" type="hinge" axis="0 0 1" pos="0.0105 -0.089 0" limited="true" range="-0.75 0.75" class="rg6:joint"/>
+                                                <geom mesh="Part011" name="rg6:right_in" type="mesh" class="rg6:visual"/>
+                                                <body name="rg6:right_link">
+                                                    <geom  type="box" pos="0.045 -0.11 -0.01" size="0.045 0.015 0.016" quat="0.9239 0 0 -0.3827" class="rg6:contact"/>
+                                                </body>
+                                                
+                                                <body name="rg6:right_middle_link">
+                                                    <joint name="rg6:right_in_down_joint" type="hinge" axis="0 0 1" pos="0.0655 -0.147 0" limited="true" range="-0.75 0.75" class="rg6:joint"/>
+
+                                                    <geom mesh="Part016" name="rg6:right_middle" type="mesh" class="rg6:visual" />
+                                                    <geom mesh="Part020" name="rg6:right_fingertip" type="mesh" class="rg6:visual_2" />
+                                                    <geom type="box" pos="0.061 -0.168 -0.012" size="0.0065 0.020 0.01" class="rg6:contact" />
+                                                    <!-- <site name="right_gripper_site" type="sphere" pos="0.0545 -0.168 -0.012" size=".002 .002 .002"/> -->
+                                                </body>
+                                            </body>
+
+                                            <body name="rg6:right_out_link">
+                                                <joint name="rg6:right_out_up_joint" type="hinge" axis="0 0 1" pos="0.0235 -0.0665 0" limited="true" range="-0.75 0.75" class="rg6:joint"/>
+                                                <geom mesh="Part015" name="rg6:right_out" type="mesh" class="rg6:visual"/>
+                                            </body>
+
+                                            <body name="rg6:left_in_link">
+                                                <joint name="rg6:left_in_up_joint" type="hinge" axis="0 0 1" pos="-0.0105 -0.089 0" limited="true" range="-0.75 0.75" class="rg6:joint"/>
+                                                <geom mesh="Part019" name="rg6:left_in" type="mesh" class="rg6:visual"/>
+                                                <body name="rg6:left_link" >
+                                                    <geom type="box" pos="-0.045 -0.11 -0.01" size="0.045 0.015 0.016" quat="0.9239 0 0 0.3827" class="rg6:contact"/>
+                                                </body>
+                                                
+                                                <body name="rg6:left_middle_link">
+                                                    <joint name="rg6:left_in_down_joint" type="hinge" axis="0 0 1" pos="-0.0655 -0.147 0" limited="true" range="-0.75 0.75" class="rg6:joint"/>
+                                                    <geom mesh="Part003" name="rg6:left_middle" type="mesh" class="rg6:visual" />
+                                                    <geom mesh="Part004" name="rg6:left_fingertip" type="mesh" class="rg6:visual_2" />
+                                                    <geom type="box" pos="-0.061 -0.168 -0.012" size="0.0065 0.020 0.01" class="rg6:contact"/>
+                                                    <site name="left_gripper_site" type="sphere" pos="-0.0545 -0.168 -0.012" size=".002 .002 .002"/>
+                                                </body>
+                                            </body>
+
+                                            <body name="rg6:left_out_link">
+                                                <joint name="rg6:left_out_up_joint" type="hinge" axis="0 0 1" pos="-0.0235 -0.0665 0" limited="true" range="-0.75 0.75" class="rg6:joint"/>
+                                                <geom mesh="Part008" name="rg6:left_out" type="mesh" class="rg6:visual"/>
+                                            </body>
+
+                                        </body>
+                                                                           
+                                        
+                                      <!--   <body name='rg6_base' pos='0 0 0.0037' quat="0.5 0.5 -0.5 -0.5" >
+                                            <geom conaffinity="0" contype="0" mesh="rg6_single_bracket" name="rg6_single_bracket" type="mesh" class="gripper:asset_class"/>
+                                            <body>
+                                            <geom pos="0.1 0 0" rgba="1 0 0 1" size=".01 .01 .01" type="box"/>
+                                            <geom pos="0 0.1 0" rgba="0 1 0 1" size=".01 .01 .01" type="box"/>
+                                            <geom pos="0 0 0.1" rgba="0 0 1 1" size=".01 .01 .01" type="box"/>
+                                            </body>
+                                            <body name="RG6_Wireless" pos="0 0.049 -0.01" quat="0  1 0  0">
+                                                <geom mesh="Part000" name="gripper_center_0" type="mesh" class="gripper:visual"/>
+                                                <geom mesh="Part005" name="gripper_center_1" type="mesh" class="gripper:visual"/>
+
+                                                <geom mesh="Part004" name="fingertip_0" type="mesh" class="gripper:fingertip"/>
+                                                <geom mesh="Part020" name="fingertip_1" type="mesh" class="gripper:fingertip"/>
+                                               
+
+
+                                                <geom conaffinity="0" contype="0" mesh="Part021" name="Part021" type="mesh" class="gripper:black_visual"/>
+                                                <geom conaffinity="0" contype="0" mesh="Part022" name="Part022" type="mesh" class="gripper:black_visual"/>
+                                                <geom conaffinity="0" contype="0" mesh="Part023" name="Part023" type="mesh" class="gripper:black_visual"/>
+                                                <geom conaffinity="0" contype="0" mesh="Part024" name="Part024" type="mesh" class="gripper:black_visual"/>
+                                                <geom conaffinity="0" contype="0" mesh="Part025" name="Part025" type="mesh" class="gripper:black_visual"/>
+                                                <geom conaffinity="0" contype="0" mesh="Part026" name="Part026" type="mesh" class="gripper:black_visual"/>
+                                                <geom conaffinity="0" contype="0" mesh="Part027" name="Part027" type="mesh" class="gripper:black_visual"/>
+                                                <geom conaffinity="0" contype="0" mesh="Part028" name="Part028" type="mesh" class="gripper:black_visual"/>
+
+
+                                           
+                                                <geom conaffinity="0" contype="0" mesh="Part015" name="gripper:right_out" type="mesh" class="gripper:asset_class"/>
+
+                                                <geom conaffinity="0" contype="0" mesh="Part011" name="gripper:right_in" type="mesh" class="gripper:asset_class"/>
+                                               
+                                                <geom conaffinity="0" contype="0" mesh="Part016" name="gripper:right_middle" type="mesh" class="gripper:asset_class"/>
+
+
+
+                                                <geom conaffinity="0" contype="0" mesh="Part008" name="Part008" type="mesh" class="gripper:asset_class"/>
+                                                
+                                                
+                                                
+                                                
+                                                <geom conaffinity="0" contype="0" mesh="Part003" name="Part003" type="mesh" class="gripper:asset_class"/>
+                                                <geom conaffinity="0" contype="0" mesh="Part009" name="Part009" type="mesh" class="gripper:asset_class"/>
+                                                <geom conaffinity="0" contype="0" mesh="Part017" name="Part017" type="mesh" class="gripper:asset_class"/>
+                                                <geom conaffinity="0" contype="0" mesh="Part010" name="Part010" type="mesh" class="gripper:asset_class"/>
+                                               
+                                                <geom conaffinity="0" contype="0" mesh="Part012" name="Part012" type="mesh" class="gripper:asset_class"/>
+                                                <geom conaffinity="0" contype="0" mesh="Part018" name="Part018" type="mesh" class="gripper:asset_class"/>
+                                                <geom conaffinity="0" contype="0" mesh="Part014" name="Part014" type="mesh" class="gripper:asset_class"/>
+                                                <geom conaffinity="0" contype="0" mesh="Part019" name="Part019" type="mesh" class="gripper:asset_class"/>
+                                               
+                                                
+                                                
+                                                
+                                               
+                                                
+                                                <geom conaffinity="0" contype="0" mesh="Part007" name="Part007" type="mesh" class="gripper:asset_class"/>
+                                                <geom conaffinity="0" contype="0" mesh="Part013" name="Part013" type="mesh" class="gripper:asset_class"/>
+                                                <geom conaffinity="0" contype="0" mesh="Part006" name="Part006" type="mesh" class="gripper:asset_class"/>
+                                            </body>
+
+                                        </body> -->
+                                      
+
+                                      
+    
+
+                                    </body>
+                                </body>
+                            </body>
+                        </body>
+                    </body>
+                </body>
+            </body>
+        </body>
+    </body>
+</mujoco>
