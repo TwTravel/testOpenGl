@@ -1,0 +1,44 @@
+   地图配置文件和SimNature的配置文件一样，采用相同的结构。具体参见《配置文件格式.txt》文件。
+   
+[Map]
+size      地图尺寸（整形数，必须时2的整数次方加一）
+maintex   地图的主纹理文件（字符串）
+mapfile   地图的数据文件
+texdetail 细节纹理的惊喜程度
+detail1 
+detail2 
+detail3 
+detail4 
+detail5 
+detail6 
+detail7 
+detail8  八个细节纹理的文件名（目前只用到了3个）
+is_detail_tex  是否使用细节纹理
+strength       地图的高度。一般在0.4左右。（）
+
+[SkyBox]
+style 天空体的形状，目前只能为 BOX
+left 
+right  
+front  
+back  
+top  
+bottom     天空体 六个面的纹理。
+height     天空体的高度
+start_h    天空体的开始高度，
+start_x    体空体的X方向位置
+start_y    体空体的Y方向位置
+
+[LensFlar]
+pos_h 
+pos_x 
+pos_y 太阳的位置坐标
+
+[BillBoard]
+count 树木的数量
+height 树木的最大高度
+width  树木的最大宽度
+tree1  第一种树木的纹理
+tree2  第二种树木的纹理
+tree3  第三种树木的纹理
+tree4  第四种树木的纹理
