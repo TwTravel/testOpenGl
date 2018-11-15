@@ -21,7 +21,7 @@
 #include "RgbImage.h"
 
 #ifndef RGBIMAGE_DONT_USE_OPENGL
-#include <windows.h>
+//#include <windows.h>
 #include "GL/gl.h"
 #endif
 
