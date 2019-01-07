@@ -1,0 +1,225 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+   <META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <TITLE>PLIB: Downloading and Installing PLIB.</TITLE>
+</HEAD>
+<BODY text="#B5A642" link="#8FFF8F" vlink="#18A515" alink="#20336B"
+ bgcolor="#005000" background="marble.png">
+
+<TABLE>
+<TR>
+<TD>
+<IMG SRC="plib_logo.png" ALT="PLIB Logo" width=256 height=245>
+<br>
+</TD>
+<TD>
+<center>
+<H1>
+     <FONT SIZE=9>S</FONT><FONT SIZE=5>TEVE'S</FONT>
+     <FONT SIZE=9>P</FONT><FONT SIZE=5>ORTABLE</FONT>
+     <FONT SIZE=9>G</FONT><FONT SIZE=5>AME</FONT>
+     <FONT SIZE=9>L</FONT><FONT SIZE=5>IBRARY.</FONT>
+</H1>
+</center>
+</TD>
+<TD>
+<ul>
+And Lo, the Lion and the Sheep shall lie down together - but the Sheep won't
+get much Sleep.
+<br>
+-- Woody Allen
+</ul>
+<center>
+<A href="http://sf.net"> 
+<IMG src="http://sf.net/sflogo.php?group_id=382&type=1" width="88" height="31" border="0" ALT="Sourceforge Logo"></A> 
+</center>
+</TD>
+</TR>
+</TABLE>
+
+<TABLE>
+<TR>
+<TD valign=top align=left>
+<A HREF="index.html"><IMG SRC="home.png" ALT="HOME" BORDER="0" width=150 height=50></A><br>
+<A HREF="whats_inside.html"><IMG SRC="whats_inside.png" ALT="WHAT'S INSIDE" BORDER="0" width=150 height=50></A><br>
+<A HREF="license.html"><IMG SRC="license.png" ALT="LICENSE" BORDER="0" width=150 height=50></A><br>
+<A HREF="contacts.html"><IMG SRC="contacts.png" ALT="CONTACTS" BORDER="0" width=150 height=50></A><br>
+<A HREF="requirements.html"><IMG SRC="requirements.png" ALT="REQUIREMENTS" BORDER="0" width=150 height=50></A><br>
+<A HREF="gallery.html"><IMG SRC="gallery.png" ALT="GALLERY" BORDER="0" width=150 height=50></A><br>
+<A HREF="download.html"><IMG SRC="download.png" ALT="DOWNLOAD & INSTALL" BORDER="0" width=150 height=50></A><br>
+<A HREF="examples.html"><IMG SRC="examples.png" ALT="EXAMPLES" BORDER="0" width=150 height=50></A><br>
+
+<A HREF="sg/index.html"><IMG SRC="SG.png" ALT="SG" BORDER="0" width=75 height=25></A>
+<A HREF="ssg/index.html"><IMG SRC="SSG.png" ALT="SSG" BORDER="0" width=75 height=25></A><br>
+
+<A HREF="ssgAux/index.html"><IMG SRC="ssgAux.png" ALT="SSGAUX" BORDER="0" width=75 height=25></A>
+<A HREF="fnt/index.html"><IMG SRC="FNT.png" ALT="FNT" BORDER="0" width=75 height=25></A><br>
+
+<A HREF="pui/index.html"><IMG SRC="PUI.png" ALT="PUI" BORDER="0" width=75 height=25></A>
+<A HREF="psl/index.html"><IMG SRC="PSL.png" ALT="PSL" BORDER="0" width=75 height=25></A>
+
+<A HREF="util/index.html"><IMG SRC="UL.png" ALT="UL" BORDER="0" width=75 height=25></A>
+<A HREF="js/index.html"><IMG SRC="JS.png" ALT="JS" BORDER="0" width=75 height=25></A><br>
+
+<A HREF="net/index.html"><IMG SRC="NET.png" ALT="NET" BORDER="0" width=75 height=25></A>
+<A HREF="sl/index.html"><IMG SRC="SL.png" ALT="SL" BORDER="0" width=75 height=25></A><br>
+
+<A HREF="pw/index.html"><IMG SRC="PW.png" ALT="PW" BORDER="0" width=75 height=25></A>
+<A HREF="puAux/index.html"><IMG SRC="puAux.png" ALT="PUAUX" BORDER="0" width=75 height=25></A><br>
+
+</TD>
+<TD>
+<H1>Downloading and Installing PLIB.</H1>
+<H2>The Short Answer (for Linux and CygWin users):</H2>
+Make sure you have OpenGL installed.<br>
+Download this: <A HREF="dist/plib-1.8.5.tar.gz"> PLIB - Version 1.8.5</A>
+<br>
+Run this (as 'root'):
+<pre>
+     tar xzf plib-1.8.5.tar.gz
+     cd plib-1.8.5
+     ./configure ; make install
+</pre>
+Tadaaaa!
+<p>
+<H2>The Long Answer: Downloading PLIB.</H2>
+You can get PLIB in various versions here. We follow the common Linux
+convention where the second digit in the version number is EVEN for
+stable versions and ODD for unstable and/or experimental versions.
+<p>
+End users should generally download the latest stable version but
+application developers may wish to periodically compile their code
+against the odd-numbered version so as to keep abreast of developments
+in PLIB.
+<p>
+<ul>
+<li><A HREF="dist/plib-1.8.5.tar.gz"> PLIB - Version 1.8.5 -- Current Stable</A>
+<li><A HREF="dist/"> PLIB - Other versions</A>
+<li><A HREF="http://sf.net/project/?group_id=382"> PLIB - Latest development version (from CVS)</A>
+<li><A HREF="dist/current.tgz"> PLIB - Latest development version (tarball)</A>
+</ul>
+Download this using your browser by right-clicking on the name.  If you
+have InternetExplorer, you'll probably fall victim to it's stupid bug
+where it unzips the file automatically - but forgets to
+rename it to lose the '.gz' off the end.  Just rename it yourself
+before you try to un-tar it and all will be well.
+<p>
+PLIB documentation, example programs, fonts, etc are separated from
+PLIB itself to minimise your download time.
+<p>
+The <b>online</b> documentation attempts to always track the latest stable
+version of PLIB.  If you are using some other version, you may want to
+download the documentation appropriate to that release which comes with
+the plib_examples tarball.
+
+<A NAME="EXAMPLES"></A>
+<ul>
+<li><A HREF="dist/plib_examples-1.8.5.tar.gz">
+             Example programs and Documentation for PLIB-1.8.5 or later.</A>
+<li><A HREF="dist/">PLIB_examples - Older versions</A>
+</ul>
+Un-tar this into a separate directory from PLIB itself - or else
+all the configuration and makefiles will clash.  Many of the example programs
+require the GLUT library (or 'freeglut') - some other use SDL and FLTK.
+<p>
+<A NAME="DEMOS"></A>
+More extensive PLIB demonstration programs are also separated from
+PLIB itself and are individually tarballed with their own version
+numbers.  Generally, they'll run with the most recent stable version
+of PLIB - but occasionally they'll rely on something in the latest
+PLIB beta.
+<p>
+<ul>
+<li><A HREF="dist/exposer-0.2.0.tar.gz">
+             A character animation tool.</A>
+<li><A HREF="dist/p-guide-0.0.1.tar.gz">
+             A tool for designing PUI interface panels.</A>
+<li><A HREF="dist/ttt3d-0.2.0.tar.gz">
+             A complete TicTacToe game - played in 3 dimensions!</A>
+<li><A HREF="dist/">PLIB Demos - Older versions</A>
+</ul>
+Un-tar these into a separate directory from PLIB itself - or else
+all the configuration and makefiles will clash.
+
+<H2>The Long Answer: Installing PLIB.</H2>
+On most Linux and other UNIX-like OS's, it's simply a matter of
+unpacking the tar-ball, changing directory into the plib_x.y.z
+directory that this creates and typing:
+<pre>
+
+   ./configure
+   make install
+
+</pre>
+You'll need to
+be 'root' to perform the last step.  At the end of that process,
+you should have a set of header files in /usr/include/plib
+and a set of corresponding libraries in /usr/lib. There
+are some example programs in the 'plib-x.y.z/examples' subdirectory.
+<p>
+WARNING: If you are using 'Mesa' instead of an 'Official' OpenGL,
+please make sure you followed the instructions in the Mesa installation
+notes that tell you to symbolically link /usr/lib/libGL.so
+and /usr/lib/libGLU.so to their Mesa equivelents.  More modern
+versions of Mesa may install directly into that location - but
+make sure that one way or another, /usr/lib/libGL.so points to your
+current OpenGL/Mesa library.
+<p>
+Some Linux distro's install OpenGL/Mesa in /usr/X11R6/lib - that
+is now officially deprecated - if your OpenGL/Mesa is installed
+there then I suggest you add symbolic links to make the
+files appear to be in /usr/lib.
+<p>
+If you are running some non-UNIX OS, (eg MS-Windows) there may be
+instructions on how to build PLIB in README.{OS name}.  If you
+have problems - or can offer to streamline the
+process, then please pass on your knowledge via the mailing list.
+In general, it isn't complicated to install - you usually just have
+to compile all of the source files in each directory and link
+each subdirectory into a separate library. Don't try to make
+PLIB into a M$ '.DLL' - it's not worth the effort!
+<p>
+If you have the Microsoft Visual C++ suite, you'll find a set
+of project files - one in each source directory - plus a master
+workspace at the top of the tree.
+<p>
+If you have all the Cygnus (CygWin) compiler/tools, then use
+the UNIX build instructions.
+<p>
+There is now a README.mac for Macintosh users.
+
+<H2> Where Does PLIB Install Itself? </H2>
+This is always a controversial topic.  In order to maintain
+our own sanity, we expect PLIB to be installed in one place
+and in one place only.
+<pre>
+
+  Libraries are in:    /usr/lib/libplibXXX.a
+
+  Headers are in:      /usr/include/plib/XXX.h
+
+</pre>
+(Where 'XXX' is the short acronym for the PLIB library in question -
+in lowercase).
+<p>
+The now *VERY* obsolete PLIB 1.0.* used to install itself
+into /usr/local/plib, but from version 1.1.0 onwards, the
+modern location was adopted following discussions with
+several Linux distributors.
+<p>
+Please don't even <b>think</b> about arguing about this decision,
+it has been the topic of long and arduous discussion and it's
+NEVER going to change!
+
+</TD>
+</TR>
+</TABLE>
+<hr>
+<ADDRESS>
+<A HREF="http://www.sjbaker.org">
+Steve J. Baker.</A>
+&lt;<A HREF="mailto:sjbaker1@airmail.net">sjbaker1@airmail.net</A>&gt;
+</ADDRESS>
+</BODY>
+</HTML>

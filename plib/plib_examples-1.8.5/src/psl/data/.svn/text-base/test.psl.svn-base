@@ -1,0 +1,9 @@
+
+
+void main ()
+{
+  int diff ;
+
+  if ( diff == 1 ) { diff = 2 ; } else { diff = 3 ; }
+}
+
